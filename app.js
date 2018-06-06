@@ -1,14 +1,19 @@
-function getEnv(key) {
-    const value = process.env[key];
+function getEnv(key, defaultValue) {
+    let value = process.env[key];
     if (value == null) {
-        console.error(`${key} is not defined`);
-        process.exit(1);
+        if (defaultValue != null) {
+            value = defaultValue;
+        } else {
+            console.error(`${key} is not defined`);
+            process.exit(1);
+        }
     }
+    console.log(`${key}: ${value}`);
     return value;
 }
 
-const PORT = 3000 // getEnv('PORT');
-const DATA_DIR = getEnv('DATA_DIR');
+const PORT = getEnv('PORT', 3000);
+const DATA_DIR = getEnv('DATA_DIR', '/data');
 
 const http = require('http')
 const Gun = require('gun')
