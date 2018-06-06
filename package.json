@@ -1,0 +1,10 @@
+{
+  "name": "instantgun1",
+  "version": "0.0.1",
+  "main": "app.js",
+  "scripts": {
+  },
+  "dependencies": {
+    "gun": "^0.9.998"
+  }
+}
