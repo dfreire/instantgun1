@@ -7,7 +7,7 @@ function getEnv(key) {
     return value;
 }
 
-const PORT = getEnv('PORT');
+const PORT = 3000 // getEnv('PORT');
 const DATA_DIR = getEnv('DATA_DIR');
 
 const http = require('http')
