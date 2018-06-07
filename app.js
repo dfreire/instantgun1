@@ -16,7 +16,7 @@ const PORT = getEnv('PORT', 3000);
 const DATA_DIR = getEnv('DATA_DIR', '/data');
 
 const http = require('http')
-const Gun = require('gun')
+const Gun = require('custom-gun')
 
 const server = http.createServer();
 
