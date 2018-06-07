@@ -6,6 +6,6 @@
     "start": "node app.js"
   },
   "dependencies": {
-    "gun": "^0.9.998"
+    "custom-gun": "^0.9.99801"
   }
 }
